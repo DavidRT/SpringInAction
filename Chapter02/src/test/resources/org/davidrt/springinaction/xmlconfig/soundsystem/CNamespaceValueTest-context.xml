@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- using c namespace to pass arguments to constructor and set properties in order of _index-->
+  <bean id="compactDisc" class="org.davidrt.springinaction.xmlconfig.soundsystem.BlankDisc"
+        c:_0="Sgt. Pepper's Lonely Hearts Club Band" 
+        c:_1="The Beatles" />     
+  
+  <bean id="cdPlayer" class="org.davidrt.springinaction.xmlconfig.soundsystem.CDPlayer"
+        c:_-ref="compactDisc" />
+
+</beans>
